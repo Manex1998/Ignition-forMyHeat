@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+header {
+    
+    background-color: #262630;
+    height: 750px;
+   
+}
+
+nav ul {
+
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 50px;
+    padding: 50px 100px;
+}
+
+nav li a{
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.logo {
+
+    position: relative;
+    width: 62%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 57px;
+
+}
+
+.logo h1 {
+
+    color: #fff;
+    font-weight: 600;
+    font-size: 100px;
+
+}
+
+.highlight {
+
+    color: #d54548;
+}
+
+small {
+
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    top: 95px;
+    left: 300px;
+
+}
+
+p {
+
+    color: #fff;
+
+}
+
+.intro {
+
+    font-size: 30px;
+
+}
+
+.promo {
+
+    font-size: 57px;
+
+}
+
+.hero-text {
+
+    width: 62%;
+    margin: auto;
+
+}
+
+.yellow-glow {
+
+    color: #f0d30b;
+    font-weight: 530; 
+    text-shadow: 0 0 12px #f0d30b;
+    
+
+}
+
+
+    .btn:active { 
+      transform: scale(0.97); 
+    }
+
+    .btn-gold    { 
+      background: #f0d30b;   
+      color: #262630;
+      padding: 0.3rem 2.9rem;
+      box-shadow: 0 0 20px #726407; 
+    }
+
+
+    .btn-red     { 
+      background: #d54548;    
+      color: #262630;
+      padding: 0.3rem 3.5rem;
+      box-shadow: 0 0 20px #4e1314;
+      
+    }
+
+    .btn-outline { 
+      background: transparent;  
+      color: #fff; 
+      border: 2px solid #fff !important;
+      padding: 0.3rem 0.9rem;
+      box-shadow: 0 0 10px #262630;
+    }
+
+
+ .hero-cta {
+    margin-top: 75px !important;
+    margin-bottom: 20px !important;
+    margin: auto;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    width: 62%;
+ }
+
+
+    .btn {
+      display: inline-block;    
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 1.5rem;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.25s;
+      text-decoration: none !important;
+      text-align: center;
+    }
+
+
+
+/*=============PRODUCTS==================*/
+
+/*=======================================*/
+
+.products-head-text {
+
+    position: relative;
+    width: 62%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 57px;
+
+}
+
+.products-head-text h1 {
+
+    color: #d54548;
+    font-weight: 600;
+    font-size: 100px;
+
+}
+
+.products-head-text .products-text {
+
+    color: #262630;
+    position: absolute;
+    
+}

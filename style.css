@@ -170,7 +170,6 @@ p {
     position: relative;
     width: 62%;
     margin: auto;
-    margin-top: 20px;
     margin-bottom: 57px;
 
 }
@@ -259,7 +258,7 @@ p {
 
  .products-cta {
     
-    margin-bottom: 70px !important;
+    
     margin: auto;
     display: flex;
     gap: 1.5rem;
@@ -269,8 +268,9 @@ p {
 
 .products-box {
 
-    height: 650px;
-    margin-bottom: 2px;
+    /* height removed to allow content to determine height */
+    padding-bottom: 110px;
+    padding-top: 50px;
 
 }
 
@@ -281,14 +281,71 @@ p {
 #pricing-section {
     
     background-color: #262630;
-    height: 750px;
-   
+
+}
+
+.container-pricing {
+    width: 62%;
+    margin: 0 auto 0 auto;
+
+}
+
+
+.pricing-box {
+
+   padding-top: 100px;
+
 }
 
 .container-pricing {
 
-    margin: auto;
-    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+.pricing-box h1 {
+
+    color: #fff;
+    font-weight: 600;
+    font-size: 100px;
+
+}
+
+.pricing-box .price {
+
+    font-weight: 400;
+
+}
+
+
+.pricing-box-gold {
+
+    color: #fff;
+    padding-top: 30px;
+    padding-bottom: 120px;
+
+}
+
+.pricing-box-gold .price {
+
+    font-size: 100px;
+    font-weight: 400;
+    color: #f0d30b;
+}
+
+.p-bigger {
+
+    font-size: 60px;
+    font-weight: 100;
+
+}
+
+ p {
+
+    font-size: 30px;
+
 }
 
 

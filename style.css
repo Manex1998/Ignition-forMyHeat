@@ -127,6 +127,14 @@ p {
       box-shadow: 0 0 10px #262630;
     }
 
+     .btn-charcoal { 
+      background: #262630;  
+      color: #fff; 
+      border: 2px solid #262630 !important;
+      padding: 0.3rem 2rem;
+      box-shadow: 0 0 10px #262630;
+    }
+
 
  .hero-cta {
     margin-top: 75px !important;
@@ -179,5 +187,109 @@ p {
 
     color: #262630;
     position: absolute;
+    font-size: 26px;
+    font-weight: 600;
+    top: 95px;
+    left: 2.5px;
     
 }
+
+.products-mid-content {
+
+    width: 62%;
+    height: 300px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 27px;
+    display: flex;
+    gap: 100px;
+    align-items: start;
+    
+}
+
+.products-tab--box {
+
+    position: relative;
+    
+
+
+}
+
+ .tabs {
+
+    display: flex;
+    align-items: center;
+    z-index: -1;
+
+}
+
+.products-tab--box .tabs .tab {
+
+    width: 130px;
+    height: 100px;
+    padding-top: 10px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #262630;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.products-tab--box .tabs .tab:hover,
+.products-tab--box .tabs .tab.active {
+    background-color: #262630;
+    color: #fff;
+}
+
+.product-card {
+
+    position: absolute;
+    top: 35px;
+    width: 520px;
+    height: 260px;
+    background: #262630;
+    border-radius: 20px;
+    padding: 40px 20px;
+    color: #fff;
+    font-size: 25px;
+
+}
+
+ .products-cta {
+    
+    margin-bottom: 70px !important;
+    margin: auto;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    width: 62%;
+ }
+
+.products-box {
+
+    height: 650px;
+    margin-bottom: 2px;
+
+}
+
+
+
+/*============PRICING============*/
+
+#pricing-section {
+    
+    background-color: #262630;
+    height: 750px;
+   
+}
+
+.container-pricing {
+
+    margin: auto;
+    margin-top: 50px;
+}
+
+
+

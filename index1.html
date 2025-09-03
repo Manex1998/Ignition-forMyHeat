@@ -1,129 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>IgnitionOn by MyHeat</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IgnitionOn by MyHeat</title>
 
-        <!-- Google Font: Montserrat (matches mock‑up) -->
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
 
 
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-       
-        <!-- Font‑Awesome for icons -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-****" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./style.css">
+</head>
 
-        <link rel="stylesheet" href="./style.css">
+<body>
 
-    </head>
+  <!-- ================= HEADER ================= -->
+  <header class="text-white">
+    <nav class="navbar navbar-expand-lg navbar-dark container">
+      <a class="navbar-brand fw-bold" href="#">Igniti<span class="highlight">on.</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <body>
+      <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+        <ul class="navbar-nav gap-4">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#products-section">Package</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pricing-section">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
 
-    <!-- ================= HEADER / HERO ================= -->
-            <header>
-                
-                <nav>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#products">Package</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-                
+    <div class="container mt-5">
+      <div class="logo">
+        <h1 class="display-1 fw-bold">Igniti<span class="highlight">on.</span></h1>
+        <small class="fs-4">by MyHeat</small>
+      </div>
 
-                <div class="container-hero">
-                    <div class="dotted hero-left"></div>
-                    <div class="dotted hero-right"></div>
+      <div class="hero-text">
+        <p class="intro fs-3">Turn <span class="highlight">on</span> your online presence today, it's not 2003 anymore…</p>
+        <p class="promo">Get a professional <span class="highlight">website & email</span> for your business at
+          <span class="yellow-glow">R99pm.</span>
+        </p>
+      </div>
 
-                    <div class="logo">
-                        <h1>Igniti<span class="highlight">on.</span></h1>
-                        <small>by MyHeat</small>
+      <div class="hero-cta d-flex gap-3 flex-wrap mt-4">
+        <a href="#products-section" class="btn btn-outline">Learn More</a>
+        <a href="#pricing-section" class="btn btn-gold">Pricing</a>
+        <a href="#contact" class="btn btn-red">Start</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= PRODUCTS ================= -->
+  <section id="products-section" class="py-5">
+    <div class="container">
+      <div class="products-head-text mb-5">
+        <h1 class="fw-bold">Products</h1>
+        <p class="products-text">Everything included in the <span class="highlight">Ignition.</span> package</p>
+      </div>
+
+        <div class="row align-items-start g-5">
+            <!-- Left -->
+            <div class="col-lg-6">
+                <div class="product-box">
+                    <div class="tabs">
+                        <div class="tab active" data-tab="domain">Domain</div>
+                        <div class="tab" data-tab="web">Web design</div>
+                        <div class="tab" data-tab="hosting">Hosting</div>
+                        <div class="tab" data-tab="email">Email</div>
                     </div>
 
-                    <div class="hero-body">
-                        <div class="hero-text">
-                            <p class="intro">Turn <span class="highlight">on</span> your online presence today, it's not 2003 anymore…</p>
-                            <p class="promo">Get a professional <span class="highlight">website & email</span> for your business at <span class="yellow-glow">R99pm.</span></p>
-                        </div>
-
-                        <div class="hero-social-icons"></div>
+                    <!-- Cards -->
+                    <div class="product-card active" data-content="domain">
+                        <p>
+                        Look, you need <span class="highlight">a slice</span> of the internet pie!
+                        We help you lock down that one-of-a-kind
+                        <span class="highlight">domain name</span> that says,
+                        “Yep, this is my corner of the web.” Make it <span class="highlight">unforgettable</span>, make it yours.
+                        </p>
                     </div>
 
-                    <div class="hero-cta">
-                        <button href="#products" class="btn btn-outline">Learn More</button>
-                        <button href="#pricing" class="btn btn-gold">Pricing</button>
-                        <button href="#contact" class="btn btn-red">Start</button>
+                    <div class="product-card" data-content="web">
+                        <p>
+                        Your website is your <span class="highlight">digital shopfront</span>.  
+                        We craft modern, mobile-friendly, and fast web designs that make your
+                        business stand out online.
+                        </p>
+                    </div>
+
+                    <div class="product-card" data-content="hosting">
+                        <p>
+                        Reliable <span class="highlight">hosting</span> means your site is always
+                        online. We keep the lights on so you don’t have to worry.
+                        </p>
+                    </div>
+
+                    <div class="product-card" data-content="email">
+                        <p>
+                        Look professional with a <span class="highlight">custom email address</span>.  
+                        Forget @gmail, step up with <span class="highlight">you@yourbusiness.co.za</span>.
+                        </p>
                     </div>
                 </div>
-            </header>
 
-            <section id="products-section">
-                <div class="products-box">
+            </div>
 
-                    <div class="products-head-text">
-                        <h1>Products</h1>
-                        <p class="products-text">Everything included in the <span class="highlight">Ignition.</span> package</p>
-                    </div>
+            <!-- Right -->
+            <div class="product-image col-lg-6 text-center">
+            <img src="images/Email.png" alt="www graphic" class="img-fluid rounded">
+            </div>
+        </div>
+      
+      <div class="products-cta d-flex  gap-3 mt-4">
+        <a href="#products" class="btn btn-charcoal">Start Now!</a>
+        <a href="#contact" class="btn btn-red">Pricing</a>
+      </div>
+    </div>
+  </section>
 
-                    <div class="products-mid-content">
+  <!-- ================= PRICING ================= -->
+  <section id="pricing-section" class="text-white py-5">
+    <div class="container">
+      <div class="pricing-box mb-4">
+        <h1 class="fw-bold">Pric<span class="highlight">ing.</span></h1>
+        <div class="pricing-text">
+          <p class="p-bigger">Once-off setup service fee</p>
+          <p class="p-smaller">*This includes domain registration or transfer.</p>
+        </div>
+        <h1 class="price">R299</h1>
+      </div>
 
-                        <div class="products-tab--box">
-                            <div class="tabs">
-                                <div class="tab active">Domain</div>
-                                <div class="tab">Web design</div>
-                                <div class="tab">Hosting</div>
-                                <div class="tab">Email</div>
-                            </div>
-                            <div class="product-card">
-                                Look, you need <span class="highlight">a slice</span> of the internet pie! We help you lock down that one‑of‑a‑kind <span class="highlight">domain name</span> that says, “Yep, this is my corner of the web.” Make it <span class="highlight">unforgettable</span>, make it yours.
-                            </div>
-                        </div> 
+      <div class="pricing-box-gold mb-4">
+        <div class="pricing-text">
+          <p class="p-bigger">Monthly service subscription</p>
+          <p class="p-smaller">*Charged starting from the second month, not at setup.</p>
+        </div>
+        <h1 class="price yellow-glow">R99pm</h1>
+      </div>
 
-                        <div class="mid-image">
-                            <img src="" alt="www"></img>
-                        </div>
-                    </div>
+      <div class="order-cta">
+        <a href="#contact" class="btn btn-red order-now">Order Now!</a>
+      </div>
+    </div>
+  </section>
 
-                    <div class="products-cta">
-                        <button href="#products" class="btn btn-charcoal">Start Now!</button>
-                        <button href="#contact" class="btn btn-red">Pricing</button>
-                    </div>
+  <!-- ================= FOOTER ================= -->
+  <footer id="contact" class="bg-dark text-white py-5">
+    <div class="container">
+      <div class="footer-logo mb-4">
+        <h1>Igniti<span class="highlight">on.</span></h1>
+        <small>by MyHeat</small>
+      </div>
 
-                </div>
-            </section>
+      <div class="row g-4">
+        <!-- Form -->
+        <div class="col-lg-6">
+          <form method="POST" action="">
+            <div class="mb-3">
+              <textarea class="form-control message" rows="5" name="message"
+                placeholder="How can we help you?"></textarea>
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control email" name="email" placeholder="Your email" required>
+            </div>
+          </form>
+          <div class="contact-info mt-3">
+            hello@ignition.myheat.co.za<br>+27 67 193 8677
+          </div>
+        </div>
 
-            <section id="pricing-section">
-                <div class="container-pricing">
+        <!-- Image & Social -->
+        <div class="col-lg-6 text-center">
+          <img src="images/Computer.png" alt="Vector Image" class="vector-image img-fluid mb-3">
+          <div class="social-links d-flex justify-content-center gap-3">
+            <a href="#" class="social-icon"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram fa-2x"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-                    <div class="pricing-box">
-                        <h1>Pric<span class="highlight">ing.</span></h1>
-                        <div class="pricing-text">
-                            <p class="p-bigger">Once-off setup service fee</p>
-                            <p>*This include domain registration or transfer.</p>
-                        </div>
-                        <h1 class="price">R299</h1>
-                    </div>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-                    <div class="pricing-box-gold">
-                        <div class="pricing-text">
-                            <p class="p-bigger">Monthly service subscription</p>
-                            <p>*Charged starting from the second month, not at setup.</p>
-                        </div>
-                        <h1 class="price">R99pm</h1>
-                    </div>
+<script>
+  const tabs = document.querySelectorAll(".tab");
+  const cards = document.querySelectorAll(".product-card");
 
-                </div>
-            </section>
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      // remove active from all
+      tabs.forEach(t => t.classList.remove("active"));
+      cards.forEach(c => c.classList.remove("active"));
 
+      // add active to clicked tab
+      tab.classList.add("active");
 
-    </body>
+      // show corresponding card
+      const target = tab.getAttribute("data-tab");
+      document.querySelector(`.product-card[data-content="${target}"]`)
+              .classList.add("active");
+    });
+  });
+</script>
+
+</body>
 
 </html>

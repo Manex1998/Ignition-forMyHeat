@@ -6,10 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IgnitionOn by MyHeat</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -18,11 +17,554 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="./style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+      list-style: none;
+      text-decoration: none;
+    }
+
+    /* Smooth scroll behavior */
+    :root {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #262630;
+      height: 750px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      gap: 50px;
+      padding: 50px 100px;
+    }
+
+    nav li a {
+      color: white;
+      font-size: 15px;
+      font-weight: 600;
+      transition: transform 0.3s ease; /* Add scaling transition */
+    }
+
+    nav li a:hover {
+      transform: scale(1.1); /* Scale nav links on hover */
+    }
+
+    .logo {
+      position: relative;
+      margin: auto;
+      margin-top: 20px;
+      margin-bottom: 57px;
+    }
+
+    .logo h1 {
+      color: #fff;
+      font-weight: 600;
+      font-size: 100px;
+    }
+
+    .highlight {
+      color: #d54548;
+    }
+
+    small {
+      position: absolute;
+      color: #fff;
+      font-size: clamp(26px, 2vw, 18px);
+      top: 95px;
+      left: 255px;
+    }
+
+    p {
+      color: #fff;
+    }
+
+    .intro {
+      font-size: 30px !important;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 200;
+    }
+
+    .promo {
+      font-size: 57px;
+      line-height: 1em;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+    }
+
+    .hero-text {
+      margin: auto;
+    }
+
+    .yellow-glow {
+      color: #f0d30b;
+      font-weight: 530;
+      text-shadow: 0 0 12px #f0d30b;
+    }
+
+    .btn:active {
+      transform: scale(0.97);
+    }
+
+    .btn-gold {
+      background: #f0d30b;
+      color: #262630;
+      padding: 0.3rem 2.9rem;
+      box-shadow: 0 0 20px #726407;
+      transform-origin: center; /* Center scaling */
+      margin: 5px; /* Prevent overlap */
+    }
+
+    .btn-red {
+      background: #d54548;
+      color: #262630;
+      padding: 0.3rem 3.5rem;
+      box-shadow: 0 0 20px #4e1314;
+      transform-origin: center;
+      margin: 5px;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #fff;
+      border: 2px solid #fff !important;
+      padding: 0.3rem 0.9rem;
+      box-shadow: 0 0 10px #262630;
+      transform-origin: center;
+      margin: 5px;
+    }
+
+    .btn-charcoal {
+      background: #262630;
+      color: #fff;
+      border: 2px solid #262630 !important;
+      padding: 0.3rem 2rem;
+      box-shadow: 0 0 10px #262630;
+      transform-origin: center;
+      margin: 5px;
+    }
+
+    .btn {
+      display: inline-block;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 1.5rem;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none !important;
+      text-align: center;
+    }
+
+    .btn:hover {
+      transform: scale(1.1); /* Scale buttons on hover */
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Subtle shadow on hover */
+    }
+
+    .hero-cta {
+      margin-top: 75px !important;
+      margin-bottom: 20px !important;
+      margin: auto;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    /*=============PRODUCTS==================*/
+
+    .products-head-text {
+      position: relative;
+      margin: auto;
+      margin-bottom: 65px;
+    }
+
+    .products-head-text h1 {
+      color: #d54548;
+      font-weight: 600;
+      font-size: 100px;
+    }
+
+    .products-head-text .products-text {
+      color: #262630;
+      position: absolute;
+      font-size: 26px;
+      font-weight: 600;
+      top: 95px;
+      left: 2.5px;
+    }
+
+    .products-mid-content {
+      width: 90%;
+      margin: 40px auto;
+      display: flex;
+      gap: 50px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .product-box {
+      border-radius: 20px;
+      overflow: hidden;
+      max-width: 100%;
+      margin: 10px 0; /* Add margin to prevent overlap */
+    }
+
+    .tabs {
+      display: flex;
+      background: #262630;
+    }
+
+    .tabs .tab {
+      flex: 1;
+      padding: 12px 20px;
+      text-align: center;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 18px;
+      color: #fff;
+      background: #262630;
+      transition: transform 0.3s ease, background 0.3s, color 0.3s;
+      transform-origin: center;
+    }
+
+    .tabs .tab:hover {
+      transform: scale(1.05); /* Scale tabs on hover */
+    }
+
+    .tabs .tab.active {
+      background: #fff;
+      color: #262630;
+    }
+
+    .product-card {
+      background: #262630;
+      color: #fff;
+      padding: 25px 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transform-origin: center;
+      margin: 10px; /* Add margin to prevent overlap */
+    }
+
+    .product-card.active {
+      display: block;
+      transform: scale(1.05); /* Slightly scale active card for emphasis */
+      box-shadow: 0 0 20px rgba(213, 69, 72, 0.4); /* Match shadow from previous page */
+    }
+
+    .product-card .highlight {
+      color: #e63946;
+      font-weight: bold;
+    }
+
+    .product-card {
+      display: none;
+    }
+
+    .product-image {
+      width: 450px;
+      height: auto;
+      transition: transform 0.3s ease; /* Add scaling for image */
+      transform-origin: center;
+      margin: 10px 0; /* Prevent overlap */
+    }
+
+    .product-image:hover {
+      transform: scale(1.05); /* Scale image on hover */
+    }
+
+    .products-cta {
+      margin: auto;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: start;
+    }
+
+    .products-box {
+      padding-bottom: 180px;
+      padding-top: 70px;
+    }
+
+    /*============PRICING============*/
+
+    #pricing-section {
+      background-color: #262630;
+      padding: 40px 0;
+    }
+
+    .container-pricing {
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .pricing-box {
+      padding-top: 100px;
+      margin: 10px 0; /* Prevent overlap */
+    }
+
+    .pricing-box h1 {
+      color: #fff;
+      font-weight: 600;
+      font-size: 100px;
+    }
+
+    .pricing-box .price {
+      font-weight: 400;
+      line-height: 1em;
+    }
+
+    .pricing-box-gold {
+      color: #fff;
+      padding-top: 30px;
+      padding-bottom: 10px;
+      margin: 10px 0; /* Prevent overlap */
+    }
+
+    .pricing-box-gold .price {
+      font-size: 100px;
+      font-weight: 400;
+      color: #f0d30b;
+      padding: 0;
+      margin: 0;
+      line-height: 1em;
+    }
+
+    .p-bigger {
+      font-size: 60px;
+      font-weight: 300;
+      padding: 0;
+      margin: 0;
+      line-height: 0.8em;
+    }
+
+    .p-smaller {
+      font-weight: 100;
+      padding: 0;
+      margin: 0;
+    }
+
+    p {
+      font-size: 30px;
+    }
+
+    .order-now {
+      color: #fff;
+    }
+
+    .order-cta {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      padding-bottom: 100px;
+    }
+
+    /*==============FOOTER================*/
+
+    .footer-logo {
+      width: 100%;
+      margin: 20px 0 40px;
+      position: relative;
+    }
+
+    .footer-logo h1 {
+      color: #fff;
+      font-weight: 600;
+      font-size: clamp(100px, 8vw, 80px);
+    }
+
+    .footer-logo small {
+      position: absolute;
+      color: #fff;
+      font-size: clamp(26px, 2vw, 18px);
+      top: 85px;
+      left: 250px;
+      display: block;
+      margin-top: 10px;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .form-column,
+    .image-social-column {
+      flex: 1;
+      opacity: 0;
+      animation: fadeIn 1s ease-in forwards;
+    }
+
+    .form-column {
+      max-width: 680px;
+    }
+
+    .image-social-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .vector-image {
+      max-width: 100%;
+      height: auto;
+      max-height: 300px;
+      transition: transform 0.3s ease; /* Add scaling for vector image */
+      transform-origin: center;
+      margin: 10px 0; /* Prevent overlap */
+    }
+
+    .vector-image:hover {
+      transform: scale(1.05); /* Scale image on hover */
+    }
+
+    .social-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .social-icon {
+      transition: transform 0.3s ease; /* Update to use transform instead of img */
+      transform-origin: center;
+    }
+
+    .social-icon:hover {
+      transform: scale(1.2); /* Match scaling from previous page */
+    }
+
+    .email,
+    .message {
+      padding: 0.9rem 1.3rem;
+      border-radius: 40px;
+      border: none;
+      background: #313131;
+      color: #fff;
+      font-size: 2rem;
+      width: 100%;
+      box-sizing: border-box;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transform-origin: center;
+      margin: 5px 0; /* Prevent overlap */
+    }
+
+    .email:hover,
+    .message:hover,
+    .email:focus,
+    .message:focus {
+      transform: scale(1.02); /* Match form input scaling from previous page */
+      box-shadow: 0 0 0 0.25rem rgba(213, 69, 72, 0.4); /* Match shadow */
+    }
+
+    .email {
+      height: 60px;
+      margin-bottom: 15px;
+    }
+
+    .message {
+      resize: vertical;
+    }
+
+    .contact-info {
+      color: #fff;
+      font-size: clamp(18px, 2.5vw, 22px);
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+
+    /* Fade-in Animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      body {
+        overflow-x: hidden !important;
+      }
+
+      header {
+        width: 100%;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .form-column,
+      .image-social-column {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .footer-logo h1 {
+        font-size: clamp(40px, 6vw, 50px);
+      }
+
+      .footer-logo small {
+        font-size: clamp(14px, 1.8vw, 16px);
+      }
+
+      .email,
+      .message {
+        width: 100%;
+      }
+
+      .vector-image {
+        max-height: 200px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .tabs .tab {
+        font-size: 14px;
+        padding: 10px;
+      }
+      .product-card {
+        font-size: 0.9rem;
+        padding: 20px 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .contact-info {
+        font-size: clamp(16px, 2vw, 18px);
+      }
+
+      .social-icon {
+        font-size: 1.5rem; /* Adjust icon size for smaller screens */
+      }
+    }
+  </style>
 </head>
 
 <body>
-
   <!-- ================= HEADER ================= -->
   <header class="text-white">
     <nav class="navbar navbar-expand-lg navbar-dark container">
@@ -70,61 +612,60 @@
         <p class="products-text">Everything included in the <span class="highlight">Ignition.</span> package</p>
       </div>
 
-        <div class="row align-items-start g-5">
-            <!-- Left -->
-            <div class="col-lg-6">
-                <div class="product-box">
-                    <div class="tabs">
-                        <div class="tab active" data-tab="domain">Domain</div>
-                        <div class="tab" data-tab="web">Web design</div>
-                        <div class="tab" data-tab="hosting">Hosting</div>
-                        <div class="tab" data-tab="email">Email</div>
-                    </div>
-
-                    <!-- Cards -->
-                    <div class="product-card active" data-content="domain">
-                        <p>
-                        Look, you need <span class="highlight">a slice</span> of the internet pie!
-                        We help you lock down that one-of-a-kind
-                        <span class="highlight">domain name</span> that says,
-                        “Yep, this is my corner of the web.” Make it <span class="highlight">unforgettable</span>, make it yours.
-                        </p>
-                    </div>
-
-                    <div class="product-card" data-content="web">
-                        <p>
-                        Your website is your <span class="highlight">digital shopfront</span>.  
-                        We craft modern, mobile-friendly, and fast web designs that make your
-                        business stand out online.
-                        </p>
-                    </div>
-
-                    <div class="product-card" data-content="hosting">
-                        <p>
-                        Reliable <span class="highlight">hosting</span> means your site is always
-                        online. We keep the lights on so you don’t have to worry.
-                        </p>
-                    </div>
-
-                    <div class="product-card" data-content="email">
-                        <p>
-                        Look professional with a <span class="highlight">custom email address</span>.  
-                        Forget @gmail, step up with <span class="highlight">you@yourbusiness.co.za</span>.
-                        </p>
-                    </div>
-                </div>
-
+      <div class="row align-items-start g-5">
+        <!-- Left -->
+        <div class="col-lg-6">
+          <div class="product-box">
+            <div class="tabs">
+              <div class="tab active" data-tab="domain">Domain</div>
+              <div class="tab" data-tab="web">Web design</div>
+              <div class="tab" data-tab="hosting">Hosting</div>
+              <div class="tab" data-tab="email">Email</div>
             </div>
 
-            <!-- Right -->
-            <div class="product-image col-lg-6 text-center">
-            <img src="images/Email.png" alt="www graphic" class="img-fluid rounded">
+            <!-- Cards -->
+            <div class="product-card active" data-content="domain">
+              <p>
+                Look, you need <span class="highlight">a slice</span> of the internet pie!
+                We help you lock down that one-of-a-kind
+                <span class="highlight">domain name</span> that says,
+                “Yep, this is my corner of the web.” Make it <span class="highlight">unforgettable</span>, make it yours.
+              </p>
             </div>
+
+            <div class="product-card" data-content="web">
+              <p>
+                Your website is your <span class="highlight">digital shopfront</span>.
+                We craft modern, mobile-friendly, and fast web designs that make your
+                business stand out online.
+              </p>
+            </div>
+
+            <div class="product-card" data-content="hosting">
+              <p>
+                Reliable <span class="highlight">hosting</span> means your site is always
+                online. We keep the lights on so you don’t have to worry.
+              </p>
+            </div>
+
+            <div class="product-card" data-content="email">
+              <p>
+                Look professional with a <span class="highlight">custom email address</span>.
+                Forget @gmail, step up with <span class="highlight">you@yourbusiness.co.za</span>.
+              </p>
+            </div>
+          </div>
         </div>
-      
-      <div class="products-cta d-flex  gap-3 mt-4">
-        <a href="#products" class="btn btn-charcoal">Start Now!</a>
-        <a href="#contact" class="btn btn-red">Pricing</a>
+
+        <!-- Right -->
+        <div class="product-image col-lg-6 text-center">
+          <img src="images/Email.png" alt="www graphic" class="img-fluid rounded">
+        </div>
+      </div>
+
+      <div class="products-cta d-flex gap-3 mt-4">
+        <a href="ordering.html" class="btn btn-charcoal">Start Now!</a>
+        <a href="#pricing-section" class="btn btn-red">Pricing</a>
       </div>
     </div>
   </section>
@@ -150,7 +691,7 @@
       </div>
 
       <div class="order-cta">
-        <a href="#contact" class="btn btn-red order-now">Order Now!</a>
+        <a href="ordering.html" class="btn btn-red order-now">Order Now!</a>
       </div>
     </div>
   </section>
@@ -196,27 +737,25 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<script>
-  const tabs = document.querySelectorAll(".tab");
-  const cards = document.querySelectorAll(".product-card");
+  <script>
+    const tabs = document.querySelectorAll(".tab");
+    const cards = document.querySelectorAll(".product-card");
 
-  tabs.forEach(tab => {
-    tab.addEventListener("click", () => {
-      // remove active from all
-      tabs.forEach(t => t.classList.remove("active"));
-      cards.forEach(c => c.classList.remove("active"));
+    tabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        // remove active from all
+        tabs.forEach(t => t.classList.remove("active"));
+        cards.forEach(c => c.classList.remove("active"));
 
-      // add active to clicked tab
-      tab.classList.add("active");
+        // add active to clicked tab
+        tab.classList.add("active");
 
-      // show corresponding card
-      const target = tab.getAttribute("data-tab");
-      document.querySelector(`.product-card[data-content="${target}"]`)
-              .classList.add("active");
+        // show corresponding card
+        const target = tab.getAttribute("data-tab");
+        document.querySelector(`.product-card[data-content="${target}"]`)
+                .classList.add("active");
+      });
     });
-  });
-</script>
-
+  </script>
 </body>
-
 </html>

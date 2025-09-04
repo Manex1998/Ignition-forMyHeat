@@ -51,9 +51,9 @@
     }
 
     nav li a {
-      color: white;
+      color: white !important;
       font-size: 15px;
-      font-weight: 600;
+      font-weight: 600 !important;
       transition: transform 0.3s ease; /* Add scaling transition */
     }
 
@@ -100,7 +100,7 @@
       font-size: 57px;
       line-height: 1em;
       font-family: 'Montserrat', sans-serif;
-      font-weight: 500;
+      font-weight: 300;
     }
 
     .hero-text {
@@ -417,6 +417,39 @@
       max-width: 680px;
     }
 
+      /* Target only placeholders inside this form */
+  .footer-form ::placeholder {
+    color: white;
+    opacity: 1; /* ensures it’s fully visible */
+  }
+
+   .input-with-button {
+    position: relative;
+  }
+
+  .input-with-button input {
+    padding-right: 100px; /* make space for button */
+  }
+
+ .send-btn {
+    position: absolute;
+    right: 10px; /* little spacing from edge */
+    top: 50%;
+    transform: translateY(-50%); /* centers vertically */
+    background: #d54548;
+    border: none;
+    padding: 2px 20px;
+    font-weight: 800;
+    font-size: 25px;
+    color: #262630;
+    border-radius: 50px; /* pill shape */
+    cursor: pointer;
+  }
+
+  .send-btn:hover {
+    opacity: 0.9;
+  }
+
     .image-social-column {
       display: flex;
       flex-direction: column;
@@ -592,7 +625,7 @@
       <div class="hero-text">
         <p class="intro fs-3">Turn <span class="highlight">on</span> your online presence today, it's not 2003 anymore…</p>
         <p class="promo">Get a professional <span class="highlight">website & email</span> for your business at
-          <span class="yellow-glow">R99pm.</span>
+          <span class="yellow-glow">R120pm.</span>
         </p>
       </div>
 
@@ -687,7 +720,7 @@
           <p class="p-bigger">Monthly service subscription</p>
           <p class="p-smaller">*Charged starting from the second month, not at setup.</p>
         </div>
-        <h1 class="price yellow-glow">R99pm</h1>
+        <h1 class="price yellow-glow">R120pm</h1>
       </div>
 
       <div class="order-cta">
@@ -707,19 +740,22 @@
       <div class="row g-4">
         <!-- Form -->
         <div class="col-lg-6">
-          <form method="POST" action="">
+          <form class="footer-form" method="POST" action="">
             <div class="mb-3">
               <textarea class="form-control message" rows="5" name="message"
                 placeholder="How can we help you?"></textarea>
             </div>
-            <div class="mb-3">
+            <div class="mb-3 input-with-button">
               <input type="email" class="form-control email" name="email" placeholder="Your email" required>
+              <button type="submit" class="send-btn">Send</button>
             </div>
           </form>
+
           <div class="contact-info mt-3">
             hello@ignition.myheat.co.za<br>+27 67 193 8677
           </div>
         </div>
+
 
         <!-- Image & Social -->
         <div class="col-lg-6 text-center">

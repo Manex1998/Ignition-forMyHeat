@@ -227,7 +227,7 @@
     /* Step arrow styles */
     .nav-arrow {
       position: fixed;
-      top: 50%;
+      top: 80%;
       transform: translateY(-50%);
       font-size: 1.5rem;
       background: none;
@@ -375,7 +375,7 @@
         <div class="dot"></div>
       </div>
       <h2 class="step-title"><span class="highlight">How</span> does it work?</h2>
-      <p class="step-subtitle">3 <span class="highlight">easy</span> steps. By you.</p>
+      <p class="step-subtitle">3 <span class="highlight">easy</span> steps. <span class="step-title">By <span class="highlight">you.</span></span></p>
       <div class="row g-4 justify-content-center">
         <div class="col-md-4"><div class="step-card">Tell us the name and <span class="highlight">nature</span> of your business</div></div>
         <div class="col-md-4"><div class="step-card">Select <span class="highlight">domain</span> names and email prefix</div></div>
@@ -395,7 +395,7 @@
         <div class="dot"></div>
       </div>
       <h2 class="step-title"><span class="highlight">How</span> does it work?</h2>
-      <p class="step-subtitle">3 <span class="highlight">final</span> steps. By us.</p>
+      <p class="step-subtitle">3 <span class="highlight">final</span> steps. <span class="step-title">By <span class="highlight">us.</span></span></p>
       <div class="row g-4 justify-content-center">
         <div class="col-md-4"><div class="step-card"><span class="highlight">Develop</span> and design. Email setup</div></div>
         <div class="col-md-4"><div class="step-card"><span class="highlight">Release</span> demo website for review</div></div>
@@ -487,8 +487,8 @@
   </section>
 
   <!-- Navigation Arrows -->
-  <button class="nav-arrow prev hidden" onclick="prevStep(currentStep)">← Back</button>
-  <button class="nav-arrow next" onclick="nextStep(currentStep)">Next →</button>
+  <button class="nav-arrow prev hidden" onclick="prevStep(currentStep)">Back</button>
+  <button class="nav-arrow next" onclick="nextStep(currentStep)">Next</button>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>

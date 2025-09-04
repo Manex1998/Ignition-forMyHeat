@@ -131,6 +131,13 @@
       margin-bottom: 5rem;
     }
 
+    .step-title-customd {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
     .step-box {
       background: transparent;
       border: 2px solid #e63946;
@@ -272,6 +279,85 @@
     .section-white .row.equal-height .col-md-6 > * {
       flex: 1 1 auto;
     }
+    
+    /* Domain restriction note */
+    .domain-note {
+      font-size: 0.9rem;
+      font-weight: 800;
+      color: #666;
+      text-align: end;
+      margin-top: -1rem;
+      margin-bottom: 2rem;
+    }
+    
+    /* Design style box */
+    .design-style-box {
+      background: #f8f9fa;
+      border-radius: 20px;
+      padding: 20px;
+      margin-bottom: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+    
+    .design-style-box:hover, .design-style-box.selected {
+      border-color: #d54548;
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .design-style-box h4 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+    
+    .design-style-box p {
+      color: #666;
+      font-size: 0.9rem;
+      margin: 0;
+    }
+    
+    /* Color picker styles */
+    .color-picker {
+      display: flex;
+      gap: 10px;
+      margin: 30px 0;
+    }
+    
+    .color-option {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 3px solid transparent;
+    }
+    
+    .color-option:hover, .color-option.selected {
+      transform: scale(1.2);
+      border-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    
+    /* Step 5 submit button */
+    .submit-btn {
+      background: #d54548;
+      color: white;
+      border: none;
+      border-radius: 40px;
+      padding: 15px 40px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-right: 0px;
+      display: block;
+      transition: all 0.3s ease;
+    }
+    
+    .submit-btn:hover {
+      transform: scale(1.05);
+      background: #c03c3f;
+    }
   </style>
 </head>
 <body>
@@ -281,6 +367,7 @@
     <div class="container">
       <div class="step-indicator">
         <div class="dot active"></div>
+        <div class="dot"></div>
         <div class="dot"></div>
         <div class="dot"></div>
         <div class="dot"></div>
@@ -303,6 +390,7 @@
         <div class="dot active"></div>
         <div class="dot"></div>
         <div class="dot"></div>
+        <div class="dot"></div>
       </div>
       <h2 class="step-title"><span class="highlight">How</span> does it work?</h2>
       <p class="step-subtitle">3 <span class="highlight">final</span> steps. By us.</p>
@@ -321,6 +409,7 @@
         <div class="dot"></div>
         <div class="dot"></div>
         <div class="dot active"></div>
+        <div class="dot"></div>
         <div class="dot"></div>
       </div>
       <h2 class="step-title">Tell us about <span class="highlight">you</span>.</h2>
@@ -348,14 +437,50 @@
         <div class="dot"></div>
         <div class="dot"></div>
         <div class="dot active"></div>
+        <div class="dot"></div>
       </div>
       <h2 class="step-title">How do we <span class="highlight">address</span> you?</h2>
+      
       <div class="mb-3">
         <input type="text" class="form-control dark-bg" value="Option1.co.za" readonly>
         <input type="text" class="form-control dark-bg" value="Option2.co.za" readonly>
         <input type="text" class="form-control dark-bg" value="Option3.co.za" readonly>
+        <h2 class="step-title-customd">OR enter a custom domain</h2>
         <input type="text" class="form-control highlight-bg" placeholder="OR enter a custom domain">
+        <p class="domain-note">*Domains are restricted to .co.za suffixes</p>
       </div>
+    </div>
+  </section>
+
+  <!-- STEP 5 -->
+  <section class="section section-white" style="display: none;">
+    <div class="container">
+      <div class="step-indicator">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot active"></div>
+      </div>
+      <h2 class="step-title">How do we <span class="highlight">decorate</span> you?</h2>
+      
+      <h4 class="mt-4">Design Style</h4>
+      <div class="design-style-box selected">
+        <h4>Minimalist →</h4>
+        <p>Clean, spacious, and elegant. Minimalist design uses ample white space, subtle color palettes, and only essential elements to deliver content with maximum clarity. Prioritizes user experience and simplicity.</p>
+      </div>
+      
+      <h4 class="mt-4">Base Colour</h4>
+      <div class="color-picker">
+        <div class="color-option selected" style="background-color: #d54548;"></div>
+        <div class="color-option" style="background-color: #2a9d8f;"></div>
+        <div class="color-option" style="background-color: #e9c46a;"></div>
+        <div class="color-option" style="background-color: #264653;"></div>
+        <div class="color-option" style="background-color: #f4a261;"></div>
+        <div class="color-option" style="background-color: #e76f51;"></div>
+      </div>
+      
+      <button class="submit-btn">Submit</button>
     </div>
   </section>
 
@@ -388,7 +513,28 @@
       if (step > 0) showStep(step - 1);
     }
 
-    document.addEventListener('DOMContentLoaded', () => showStep(0));
+    // Add interactivity to design style and color options
+    document.addEventListener('DOMContentLoaded', function() {
+      showStep(0);
+      
+      // Design style selection
+      const designBoxes = document.querySelectorAll('.design-style-box');
+      designBoxes.forEach(box => {
+        box.addEventListener('click', function() {
+          designBoxes.forEach(b => b.classList.remove('selected'));
+          this.classList.add('selected');
+        });
+      });
+      
+      // Color selection
+      const colorOptions = document.querySelectorAll('.color-option');
+      colorOptions.forEach(option => {
+        option.addEventListener('click', function() {
+          colorOptions.forEach(o => o.classList.remove('selected'));
+          this.classList.add('selected');
+        });
+      });
+    });
   </script>
 </body>
 </html>

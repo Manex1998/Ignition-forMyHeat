@@ -394,6 +394,64 @@
       padding-bottom: 100px;
     }
 
+
+    /* OUR CLIENTS */
+#clients-section h1 {
+  font-size: 40px;
+  color: #262630;
+}
+
+.logo-scroll {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100px;
+  margin: 30px 0;
+}
+
+.logo-track {
+  display: flex;
+  width: calc(200%); /* enough to loop */
+  animation: scroll 40s linear infinite;
+  gap: 60px;
+}
+
+.client-logo {
+  height: 120px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.client-logo:hover {
+  filter: grayscale(0%);
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Testimonials */
+#testimonialCarousel {
+  max-width: 800px;
+  margin: auto;
+}
+
+#testimonialCarousel .blockquote p {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: #262630 !important;
+}
+
+#testimonialCarousel footer {
+  font-size: 1rem;
+  color: #555;
+}
+
+
+
     /*==============FOOTER================*/
 
     .footer-logo {
@@ -765,6 +823,62 @@
       </div>
     </div>
   </section>
+
+
+  <!-- ================= OUR CLIENTS ================= -->
+<section id="clients-section" class="py-5 bg-light">
+  <div class="container">
+    <h1 class="fw-bold mb-4">Our <span class="highlight">Clients</span></h1>
+
+    <!-- Logo Scroll -->
+    <div class="logo-scroll">
+      <div class="logo-track">
+        <img src="images/1 (2).jpeg" alt="Client 1" class="client-logo">
+        <img src="images/2.jpeg" alt="Client 2" class="client-logo">
+        <img src="images/1 (4).jpeg" alt="Client 3" class="client-logo">
+        <img src="images/1.jpeg" alt="Client 4" class="client-logo">
+        <img src="images/1 (5).jpeg" alt="Client 5" class="client-logo">
+        <!-- Duplicate for seamless loop -->
+         <img src="images/1 (2).jpeg" alt="Client 1" class="client-logo">
+        <img src="images/2.jpeg" alt="Client 2" class="client-logo">
+        <img src="images/1 (4).jpeg" alt="Client 3" class="client-logo">
+        <img src="images/1.jpeg" alt="Client 4" class="client-logo">
+        <img src="images/1 (5).jpeg" alt="Client 5" class="client-logo">
+      </div>
+    </div>
+
+    <!-- Testimonials -->
+    <div id="testimonialCarousel" class="carousel slide mt-5" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <blockquote class="blockquote">
+            <p class="mb-4 quote">“Ignition helped us launch our website quickly and professionally. The service is top-notch!”</p>
+            <footer class="blockquote-footer">Mishka D, <cite title="Company">Founder, NoorSA</cite></footer>
+          </blockquote>
+        </div>
+        <div class="carousel-item">
+          <blockquote class="blockquote">
+            <p class="mb-4 quote">“The hosting is reliable and the email setup gave our business instant credibility.”</p>
+            <footer class="blockquote-footer">Rodney M, <cite title="Company">CEO Gold Standard Media</cite></footer>
+          </blockquote>
+        </div>
+        <div class="carousel-item">
+          <blockquote class="blockquote">
+            <p class="mb-4 quote" >“Affordable, smooth, and fast. Ignition is a must-have for small businesses.”</p>
+            <footer class="blockquote-footer">Amanda R, <cite title="Company">Shop Manager</cite></footer>
+          </blockquote>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+</section>
+
 
   <!-- ================= FOOTER ================= -->
   <footer id="contact" class="bg-dark text-white py-5">

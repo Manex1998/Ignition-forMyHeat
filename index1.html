@@ -274,13 +274,17 @@
     }
 
     .product-image {
+      display: none;
       width: 450px;
       height: auto;
-      transition: transform 0.3s ease; /* Add scaling for image */
+      transition: transform 0.3s ease;
       transform-origin: center;
-      margin: 10px 0; /* Prevent overlap */
+      margin: 10px 0;
     }
 
+    .product-image.active {
+      display: block;
+    }
     .product-image:hover {
       transform: scale(1.05); /* Scale image on hover */
     }
@@ -691,7 +695,19 @@
         </div>
 
         <!-- Right -->
-        <div class="product-image col-lg-6 text-center">
+        <div class="product-image col-lg-6 text-center" data-content="domain">
+          <img src="images/Domain.png" alt="www graphic" class="img-fluid rounded">
+        </div>
+
+        <div class="product-image col-lg-6 text-center" data-content="web">
+          <img src="images/Web Dev.png" alt="www graphic" class="img-fluid rounded">
+        </div>
+
+        <div class="product-image col-lg-6 text-center" data-content="hosting">
+          <img src="images/Hosting.png" alt="www graphic" class="img-fluid rounded">
+        </div>
+
+        <div class="product-image col-lg-6 text-center" data-content="email">
           <img src="images/Email.png" alt="www graphic" class="img-fluid rounded">
         </div>
       </div>
@@ -773,25 +789,29 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <script>
-    const tabs = document.querySelectorAll(".tab");
-    const cards = document.querySelectorAll(".product-card");
+ <script>
+  const tabs = document.querySelectorAll(".tab");
+  const cards = document.querySelectorAll(".product-card");
+  const images = document.querySelectorAll(".product-image");
 
-    tabs.forEach(tab => {
-      tab.addEventListener("click", () => {
-        // remove active from all
-        tabs.forEach(t => t.classList.remove("active"));
-        cards.forEach(c => c.classList.remove("active"));
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      // remove active from all
+      tabs.forEach(t => t.classList.remove("active"));
+      cards.forEach(c => c.classList.remove("active"));
+      images.forEach(i => i.classList.remove("active"));
 
-        // add active to clicked tab
-        tab.classList.add("active");
+      // add active to clicked tab
+      tab.classList.add("active");
 
-        // show corresponding card
-        const target = tab.getAttribute("data-tab");
-        document.querySelector(`.product-card[data-content="${target}"]`)
-                .classList.add("active");
-      });
+      // show corresponding card + image
+      const target = tab.getAttribute("data-tab");
+      document.querySelector(`.product-card[data-content="${target}"]`)
+              .classList.add("active");
+      document.querySelector(`.product-image[data-content="${target}"]`)
+              .classList.add("active");
     });
-  </script>
+  });
+</script>
 </body>
 </html>

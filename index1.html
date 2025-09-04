@@ -205,12 +205,7 @@
     }
 
     .products-mid-content {
-      width: 90%;
-      margin: 40px auto;
-      display: flex;
-      gap: 50px;
-      align-items: flex-start;
-      flex-wrap: wrap;
+      position: relative;
     }
 
     .product-box {
@@ -288,6 +283,27 @@
     .product-image:hover {
       transform: scale(1.05); /* Scale image on hover */
     }
+
+
+       .product-social-links {
+       
+      display: flex;
+      flex-direction: column;
+      width: 30px;
+      top: 35px;
+      right: 0;
+      gap: 20px;
+    }
+
+    .product-social-icon {
+      transition: transform 0.3s ease; /* Update to use transform instead of img */
+      transform-origin: center;
+    }
+
+    .product-social-icon:hover {
+      transform: scale(1.2); /* Match scaling from previous page */
+    }
+
 
     .products-cta {
       margin: auto;
@@ -475,6 +491,7 @@
     }
 
     .social-links {
+      width: 60%;
       display: flex;
       gap: 20px;
     }
@@ -487,6 +504,8 @@
     .social-icon:hover {
       transform: scale(1.2); /* Match scaling from previous page */
     }
+
+
 
     .email,
     .message {
@@ -612,10 +631,10 @@
 
       <div class="collapse navbar-collapse justify-content-end" id="mainNav">
         <ul class="navbar-nav gap-4">
-          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#products-section">Package</a></li>
-          <li class="nav-item"><a class="nav-link" href="#pricing-section">Pricing</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+           <li class="nav-item"><a class="nav-link" href="index1.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index1.html#products-section">Package</a></li>
+           <li class="nav-item"><a class="nav-link" href="index1.html#pricing-section">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="index1.html#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
@@ -629,7 +648,7 @@
       <div class="hero-text">
         <p class="intro fs-3">Turn <span class="highlight">on</span> your online presence today, it's not 2003 anymore…</p>
         <p class="promo">Get a professional <span class="highlight">website & email</span> for your business at
-          <span class="yellow-glow">R120pm.</span>
+          <span class="yellow-glow">R119pm.</span>
         </p>
       </div>
 
@@ -649,7 +668,7 @@
         <p class="products-text">Everything included in the <span class="highlight">Ignition.</span> package</p>
       </div>
 
-      <div class="row align-items-start g-5">
+      <div class="row products-mid-content align-items-start g-5">
         <!-- Left -->
         <div class="col-lg-6">
           <div class="product-box">
@@ -710,6 +729,8 @@
         <div class="product-image col-lg-6 text-center" data-content="email">
           <img src="images/Email.png" alt="www graphic" class="img-fluid rounded">
         </div>
+
+       
       </div>
 
       <div class="products-cta d-flex gap-3 mt-4">
@@ -728,7 +749,7 @@
           <p class="p-bigger">Once-off setup service fee</p>
           <p class="p-smaller">*This includes domain registration or transfer.</p>
         </div>
-        <h1 class="price">R299</h1>
+        <h1 class="price">R199</h1>
       </div>
 
       <div class="pricing-box-gold mb-4">
@@ -736,7 +757,7 @@
           <p class="p-bigger">Monthly service subscription</p>
           <p class="p-smaller">*Charged starting from the second month, not at setup.</p>
         </div>
-        <h1 class="price yellow-glow">R120pm</h1>
+        <h1 class="price yellow-glow">R119pm</h1>
       </div>
 
       <div class="order-cta">
@@ -774,14 +795,20 @@
 
 
         <!-- Image & Social -->
-        <div class="col-lg-6 text-center">
+       <div class="col-lg-6 ms-auto me-0 text-end">
           <img src="images/Computer.png" alt="Vector Image" class="vector-image img-fluid mb-3">
-          <div class="social-links d-flex justify-content-center gap-3">
-            <a href="#" class="social-icon"><i class="fab fa-facebook fa-2x"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-twitter fa-2x"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-instagram fa-2x"></i></a>
+
+          <!-- wrapper that pushes box right -->
+          <div class="d-flex justify-content-end">
+            <!-- box itself -->
+            <div class="social-links d-flex justify-content-center gap-3">
+              <a href="#" class="social-icon"><i class="fab fa-facebook fa-2x"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter fa-2x"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-instagram fa-2x"></i></a>
+            </div>
           </div>
         </div>
+
       </div>
     </div>
   </footer>

@@ -103,7 +103,7 @@
     .yellow-glow {
       color: #f0d30b;
       font-weight: 530;
-      text-shadow: 0 0 12px #f0d30b;
+      text-shadow: 0px -2px 17px rgba(240,211,11,0.77);
     }
 
     .btn:active {
@@ -114,7 +114,7 @@
       background: #f0d30b;
       color: #262630;
       padding: 0.3rem 2.9rem;
-      box-shadow: 0 0 20px #726407;
+      box-shadow: 0px 4px 27px -10px rgba(158,138,9,0.87);
       transform-origin: center; /* Center scaling */
       margin: 5px; /* Prevent overlap */
     }
@@ -123,7 +123,16 @@
       background: #d54548;
       color: #262630;
       padding: 0.3rem 3.5rem;
-      box-shadow: 0 0 20px #4e1314;
+      box-shadow: 0px 4px 27px -6px rgba(78,19,20,0.87);
+      transform-origin: center;
+      margin: 5px;
+    }
+
+    .btn-red-order {
+      background: #d54548;
+      color: #262630;
+      /*padding: 0.3rem 3.5rem;*/
+      box-shadow: 0px 4px 27px -6px rgba(78,19,20,0.87);
       transform-origin: center;
       margin: 5px;
     }
@@ -143,7 +152,7 @@
       color: #fff;
       border: 2px solid #262630 !important;
       padding: 0.3rem 2rem;
-      box-shadow: 0 0 10px #262630;
+      box-shadow: 0px 4px 27px -6px rgba(38,38,48,0.87);
       transform-origin: center;
       margin: 5px;
     }
@@ -151,7 +160,7 @@
     .btn {
       display: inline-block;
       border-radius: 30px;
-      font-weight: 600;
+      font-weight: 800;
       font-size: 1.5rem;
       border: none;
       cursor: pointer;
@@ -278,14 +287,13 @@
     }
 
 
-       .product-social-links {
+      .product-social-links {
        
       display: flex;
       flex-direction: column;
-      width: 30px;
-      top: 35px;
-      right: 0;
-      gap: 20px;
+      width:fit-content;
+      padding: 0 !important;
+
     }
 
     .product-social-icon {
@@ -327,7 +335,7 @@
     }
 
     .pricing-box {
-      padding-top: 100px;
+      padding-top: 10px;
       margin: 10px 0; /* Prevent overlap */
     }
 
@@ -338,7 +346,7 @@
     }
 
     .pricing-box .price {
-      font-weight: 400;
+      font-weight: 5s00;
       line-height: 1em;
     }
 
@@ -351,7 +359,7 @@
 
     .pricing-box-gold .price {
       font-size: 100px;
-      font-weight: 400;
+      font-weight: 500;
       color: #f0d30b;
       padding: 0;
       margin: 0;
@@ -719,7 +727,7 @@
         <p class="products-text">Everything included in the <span class="highlight">Ignition.</span> package</p>
       </div>
 
-      <div class="row products-mid-content align-items-start g-5">
+      <div class="row products-mid-content align-items-center g-5">
         <!-- Left -->
         <div class="col-lg-6">
           <div class="product-box">
@@ -781,7 +789,12 @@
           <img src="images/Email.png" alt="www graphic" class="img-fluid rounded">
         </div>
 
-       
+       <!-- box itself -->
+            <div class="product-social-links d-flex justify-content-center gap-3">
+              <a href="#" class="social-icon"><i class="fab fa-facebook fa-2x"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter fa-2x"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-instagram fa-2x"></i></a>
+            </div>
       </div>
 
       <div class="products-cta d-flex gap-3 mt-4">
@@ -812,7 +825,7 @@
       </div>
 
       <div class="order-cta">
-        <a href="ordering.html" class="btn btn-red order-now">Order Now!</a>
+        <a href="ordering.html" class="btn btn-red-order order-now">Order Now!</a>
       </div>
     </div>
   </section>

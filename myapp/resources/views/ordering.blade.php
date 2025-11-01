@@ -14,18 +14,52 @@
       overflow-x: hidden;
     }
 
+     .navbar {
+
+      position: fixed;
+      top: 0;
+      width: 100% !important;
+      gap: 45rem;
+      background-color: #262630;
+      z-index: 1000;
+      
+    }
+
+    .navbar-collapse {
+
+      flex-basis: 0;
+      flex-grow: 0;
+    }
+
 
     nav li a {
       color: white !important;
       font-size: 15px;
       font-weight: 600 !important;
       transition: transform 0.4s ease; /* Add scaling transition */
+      position: relative;
     }
 
     nav li a:hover {
       transform: scale(1.1); /* Scale nav links on hover */
     }
 
+     nav li a::before {
+
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0px;
+      height: 2px;
+      border-radius: 10px;
+      background-color: #fff;
+      transition: width 0.3s ease;
+    }
+
+    nav li a:hover::before {
+      width: 100%;
+    }
 
     .section {
       min-height: 100vh;
@@ -298,7 +332,7 @@
       font-size: 0.9rem;
       font-weight: 800;
       color: #666;
-      text-align: end;
+      tcext-align: end;
       margin-top: -1rem;
       margin-bottom: 2rem;
     }
@@ -377,7 +411,8 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark container">
+  <nav class="navbar navbar-expand-lg navbar-dark d-flex justify-content-center">
+    
       <a class="navbar-brand fw-bold" href="#">Igniti<span class="highlight">on.</span></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
         <span class="navbar-toggler-icon"></span>
@@ -385,13 +420,14 @@
 
       <div class="collapse navbar-collapse justify-content-end" id="mainNav">
         <ul class="navbar-nav gap-4">
-          <li class="nav-item"><a class="nav-link" href="index1.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="index1.html#products-section">Package</a></li>
-          <li class="nav-item"><a class="nav-link" href="index1.html#pricing-section">Pricing</a></li>
-          <li class="nav-item"><a class="nav-link" href="index1.html#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#products-section">Package</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#pricing-section">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
         </ul>
       </div>
-    </nav>
+    
+  </nav>
 
   <!-- STEP 1 -->
   <section class="section dark-section">
